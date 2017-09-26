@@ -1,3 +1,7 @@
+/*
+Author: Pavel Korshunov
+All right reserved
+*/
 function PKSimpleSlider(className, time)
 {
 	this.timer = time;
