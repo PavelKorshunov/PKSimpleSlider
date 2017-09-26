@@ -1,0 +1,14 @@
+.pksimple-slider {
+	width: 100%;
+}
+.pksimple-slider ul {
+	margin: 0;
+	padding: 0;
+}
+.pksimple-slider li {
+	list-style: none;
+	position: absolute;
+}
+.pksimple-slider li img {
+	width: 100%;
+}
