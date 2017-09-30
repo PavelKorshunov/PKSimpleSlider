@@ -72,11 +72,7 @@ PKSimpleSlider.prototype.listSlide = function()
 		this.items[list].style.position = "absolute";
 		this.items[list].style.float = "none";
 
-		if(direction === true)
-		{
-			list < length ? list++ : list = 0;
-		}
-		else if(direction === false)
+		if(direction === false)
 		{
 			list <= length && list >= 1 ? list-- : list = length;
 		}
@@ -116,7 +112,7 @@ PKSimpleSlider.prototype.listSlide = function()
 		this.next.addEventListener('click', function(e)
 		{
 			e.preventDefault();
-			setStyle(true);
+			setStyle();
 		});
 		this.prev.addEventListener('click', function(e)
 		{
