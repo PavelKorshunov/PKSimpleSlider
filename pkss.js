@@ -1,5 +1,5 @@
 /*
- * PKSimpleSlider.js v1.1
+ * PKSimpleSlider.js v1.1.1
  * Author: Pavel Korshunov
  * 
  * Copyright (c) 2017
@@ -18,13 +18,16 @@ function PKSimpleSlider(className, time, arrow)
 //Инициализация функций
 PKSimpleSlider.prototype.init = function()
 {
-	this.DOMCollection();
-	this.defaultStyle();
-	if(this.arrow)
+	if(document.querySelector(this.classSlide) !== null)
 	{
-		this.navigation();
+		this.DOMCollection();
+		this.defaultStyle();
+		if(this.arrow)
+		{
+			this.navigation();
+		}
+		this.listSlide();
 	}
-	this.listSlide();
 };
 //DOM элементы
 PKSimpleSlider.prototype.DOMCollection = function()
@@ -52,8 +55,8 @@ PKSimpleSlider.prototype.navigation = function()
 	this.nav = document.createElement('div');
 	this.nav.className = "pkss_container";
 	this.nav.innerHTML = 
-	"<a href='#' class='pkss_arrow next'>></a>" +
-	"<a href='#' class='pkss_arrow prev'><</a>";
+	"<a href='#' class='pkss_arrow next'><i class='fa fa-angle-right' aria-hidden='true'></i></a>" +
+	"<a href='#' class='pkss_arrow prev'><i class='fa fa-angle-left' aria-hidden='true'></i></a>";
 	this.slider.appendChild(this.nav);
 
 	this.next = this.nav.querySelector('.next');
