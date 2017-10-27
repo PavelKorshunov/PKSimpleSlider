@@ -55,8 +55,8 @@ PKSimpleSlider.prototype.navigation = function()
 	this.nav = document.createElement('div');
 	this.nav.className = "pkss_container";
 	this.nav.innerHTML = 
-	"<a href='#' class='pkss_arrow next'><i class='fa fa-angle-right' aria-hidden='true'></i></a>" +
-	"<a href='#' class='pkss_arrow prev'><i class='fa fa-angle-left' aria-hidden='true'></i></a>";
+	"<a href='#' class='pkss_arrow next'>></a>" +
+	"<a href='#' class='pkss_arrow prev'><</a>";
 	this.slider.appendChild(this.nav);
 
 	this.next = this.nav.querySelector('.next');
